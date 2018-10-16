@@ -651,7 +651,7 @@ inline const char *MicroBit::systemVersion()
 inline void MicroBit::panic(int statusCode)
 {
     //show error and enter infinite while
-	microbit_panic(statusCode);  //不显示错误码
+	microbit_panic(statusCode);  
 }
 
 #endif
