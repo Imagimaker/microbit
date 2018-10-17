@@ -216,7 +216,8 @@ void MicroBit::onListenerRegisteredEvent(MicroBitEvent evt)
         case MICROBIT_ID_COMPASS:
             // A listener has been registered for the compass.
             // The compass uses lazy instantiation, we just need to read the data once to start it running.
-            compass.getSample();
+            //compass.getSample(); //v2.1.0
+            compass.heading();//v2.0.r11
 
             break;
 
