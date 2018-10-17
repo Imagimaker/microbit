@@ -71,6 +71,7 @@ MicroBit::MicroBit() :
     accelerometer(i2c),/*v2.0.r11*/
     compass(i2c, accelerometer, storage),
     compassCalibrator(compass, accelerometer, display),
+	//////
    /*//v2.1.0
     accelerometer(MicroBitAccelerometer::autoDetect(i2c)),
     compass(MicroBitCompass::autoDetect(i2c)),
