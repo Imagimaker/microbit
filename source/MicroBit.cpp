@@ -68,14 +68,14 @@ MicroBit::MicroBit() :
     buttonA(MICROBIT_PIN_BUTTON_A, MICROBIT_ID_BUTTON_A),
     buttonB(MICROBIT_PIN_BUTTON_B, MICROBIT_ID_BUTTON_B),
     buttonAB(MICROBIT_ID_BUTTON_A,MICROBIT_ID_BUTTON_B, MICROBIT_ID_BUTTON_AB),
-    accelerometer(i2c),/*v2.0.r11*/
-    compass(i2c, accelerometer, storage),
-    compassCalibrator(compass, accelerometer, display),
-   /*//v2.1.0
-    accelerometer(MicroBitAccelerometer::autoDetect(i2c)),
-    compass(MicroBitCompass::autoDetect(i2c)),
-    compassCalibrator(compass, accelerometer, display, storage),
-   */
+    //accelerometer(i2c),/*v2.0.r11*/
+    //compass(i2c, accelerometer, storage),
+    //compassCalibrator(compass, accelerometer, display),
+    //v2.1.0
+    //accelerometer(MicroBitAccelerometer::autoDetect(i2c)),
+    //compass(MicroBitCompass::autoDetect(i2c)),
+    //compassCalibrator(compass, accelerometer, display, storage),
+   
     thermometer(storage),
     io(MICROBIT_ID_IO_P0,MICROBIT_ID_IO_P1,MICROBIT_ID_IO_P2,
        MICROBIT_ID_IO_P3,MICROBIT_ID_IO_P4,MICROBIT_ID_IO_P5,
@@ -222,7 +222,7 @@ void MicroBit::onListenerRegisteredEvent(MicroBitEvent evt)
             // A listener has been registered for the compass.
             // The compass uses lazy instantiation, we just need to read the data once to start it running.
             //compass.getSample(); //v2.1.0
-            compass.heading();//v2.0.r11
+            //compass.heading();//v2.0.r11
 
             break;
 
